@@ -13,7 +13,7 @@
         if ($result->num_rows > 0) {
             // Parcourir les résultats et afficher chaque tuple (continent, nombre de cas)
             while($row = $result->fetch_assoc()) {
-                echo "Continent: " . $row["Continent"] . "<br>";
+                echo "Continent: " . $row['Continent'] . "<br>";
             }
         } else {
             echo "0 résultats";
