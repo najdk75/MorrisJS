@@ -213,7 +213,6 @@ function fct3(){
     ?>
     var data = <?php echo $json_data; ?>;
 
-    $("#morris-area-chart").empty();
     Morris.Area({
             element: 'morris-area-chart',
             data: data,
