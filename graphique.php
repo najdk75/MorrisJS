@@ -212,6 +212,7 @@ function fct3(){
 
     ?>
     var data = <?php echo $json_data; ?>;
+    console.log(data);
 
     Morris.Area({
             element: 'morris-area-chart',
