@@ -1,5 +1,5 @@
 <?php
-        //Lister le contenu de la table movies
+        //Lister le coeeentenu de la table movies
 
         //1° - Connexion à la BDD
         $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus', 'id20205717_najd_kacem', 'u0/?#Y7S%37Cy\=i');
