@@ -2,7 +2,7 @@
         //Lister le coeeentenu de la table movies
 
         //1° - Connexion à la BDD
-        $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus2', 'id20205717_najd', '|Jwa]c44ek(]A0cl');
+        $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus2', 'id20205717_najd', '1uy&B(t{m7_#|>*H');
         $base->exec("SET CHARACTER SET utf8");
 
         //2° - Prépareation de requette et execution
