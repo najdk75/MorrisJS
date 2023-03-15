@@ -8,7 +8,7 @@
         //2° - Prépareation de requette et execution
         $sql = "SELECT * FROM pays";
 
-        $result = $base->query($sql)
+        $result = $base->query($sql);
 
         if ($result->num_rows > 0) {
             // Parcourir les résultats et afficher chaque tuple (continent, nombre de cas)
