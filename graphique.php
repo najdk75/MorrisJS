@@ -205,9 +205,9 @@ function fct3(){
 
         $data = array();
         while($row = $result->fetch_assoc()) {
-            $continent = $row['continent'];
-            $total_cas_par_continent = $row['total_cas_par_continent'];
-            $data[] = array($continent, $total_cas_par_continent);
+            $nom_pays = $row['nom'];
+            $total_cas = $row['total_cas'];
+            $data[] = array($nom_pays, $total_cas);
         }
 
         $json_data = json_encode($data);
@@ -219,9 +219,9 @@ function fct3(){
     // Parcourir les tuples et afficher les données dans la console
     for (var i = 0; i < data.length; i++) {
         var tuple = data[i];
-        var continent = tuple[0];
+        var nom_pays = tuple[0];
         var total_cas = tuple[1];
-        console.log("Continent: " + continent + " - Nombre de cas: " + total_cas);
+        console.log("Pays: " + nom_pays + " - Nombre de cas: " + total_cas);
     }
 
 }  
