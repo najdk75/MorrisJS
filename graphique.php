@@ -200,7 +200,7 @@ function fct3(){
         //1° - Connexions à la BDD
         $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus2', 'id20205717_najd', '1uy&B(t{m7_#|>*H');
 
-        //2° - Prépareation de requette et execution
+        //2° - Prépareatioen de requette et execution
         $sql = "SELECT nom, total_cas FROM pays";
         $result = $base->query($sql);
 
