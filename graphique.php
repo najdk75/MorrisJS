@@ -195,7 +195,7 @@ function fct3(){
     $("#morris-area-chart").empty();
 
     <?php
-        //Lister le contenu de la table movies
+        //Listerrr le contenu de la table movies
 
         //1° - Connexion à la BDD
         $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus2', 'id20205717_najd', '1uy&B(t{m7_#|>*H');
