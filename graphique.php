@@ -201,7 +201,7 @@ function fct3(){
 
         $base->exec("SET CHARACTER SET utf8");
 
-        //2° - Préparation de requette et execution
+        //2° - Prépareation de requette et execution
         $sql = "SELECT Continent, SUM(TotalCases) as total_cas_par_continent
         FROM COVID
         GROUP BY Continent";
