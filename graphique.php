@@ -199,9 +199,7 @@ function fct3(){
         $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus2', 'id20205717_najd', '1uy&B(t{m7_#|>*H');
 
         //2° - Prépareation de requette et execution
-        $sql = "SELECT Continent, SUM(TotalCases) as total_cas_par_continent
-        FROM Covid
-        GROUP BY Continent";
+        $sql = "SELECT nom, total_cas FROM pays";
 
         $result = $base->query($sql);
 
