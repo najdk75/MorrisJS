@@ -191,6 +191,45 @@ function fct2(){
 	}
 
 function fct3(){
+		
+    
+    <?php
+        //Lister le contenu de la table movies
+
+        //1° - Connexion à la BDD
+        $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus', 'id20205717_najd', '%zlI/so)7zem5BKX');
+
+        $base->exec("SET CHARACTER SET utf8");
+
+        //2° - Prépareation de requette et execution
+        $sql = "SELECT Continent, SUM(TotalCases) as total_cas_par_continent
+        FROM COVID
+        GROUP BY Continent";
+
+        $result = $base->query($sql)
+
+        $data = array();
+        while($row = $result->fetch_assoc()) {
+            $continent = $row['continent'];
+            $total_cas_par_continent = $row['total_cas_par_continent'];
+            $data[] = array($continent, $total_cas_par_continent);
+        }
+
+        $json_data = json_encode($data);
+
+    ?>
+
+    var data = <?php echo $json_data; ?>;
+
+    // Parcourirr les tuples et afficher les données dans la console
+    for (var i = 0; i < data.length; i++) {
+        var tuple = data[i];
+        var continent = tuple[0];
+        var total_cas = tuple[1];
+        console.log("Continent: " + continent + " - Nombre de cas: " + total_cas);
+    }
+
+
 	}  
 	
 	</script>
