@@ -214,7 +214,7 @@ function fct3(){
     var data = <?php echo $json_data; ?>;
     console.log(data);
 
-    Morris.bar({
+    Morris.Bar({
             element: 'morris-area-chart',
             data: data,
             xkey: 'nom',
