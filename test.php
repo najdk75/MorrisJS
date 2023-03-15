@@ -10,14 +10,10 @@
 
         $result = $base->query($sql);
 
-        if ($result->num_rows > 0) {
-            // Parcourir les résultats et afficher chaque tuple (continent, nombre de cas)
-            while($row = $result->fetch_assoc()) {
+        while($row = $result->fetch_assoc()) {
                 echo "Pays: " . $row['nom'] ."nombre de cas : ". $row['total_cas'] . "<br>";
             }
-        } else {
-            echo "0 résultats";
-        }
+        
         
 
     ?>
