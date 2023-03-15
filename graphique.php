@@ -192,19 +192,18 @@ function fct2(){
 
 function fct3(){
 		
-    console.log("Hello");
     <?php
         //Lister le contenu de la table movies
 
         //1° - Connexion à la BDD
-        $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus', 'id20205717_najd_kacem', 'u0/?#Y7S%37Cy\=i');
+        $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus2', 'id20205717_najd', '1uy&B(t{m7_#|>*H');
 
         //2° - Prépareation de requette et execution
         $sql = "SELECT Continent, SUM(TotalCases) as total_cas_par_continent
         FROM Covid
         GROUP BY Continent";
 
-        $result = $base->query($sql)
+        $result = $base->query($sql);
 
         $data = array();
         while($row = $result->fetch_assoc()) {
