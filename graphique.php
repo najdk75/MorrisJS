@@ -192,14 +192,12 @@ function fct2(){
 
 function fct3(){
 		
-    
+    console.log("Hello");
     <?php
         //Lister le contenu de la table movies
 
         //1° - Connexion à la BDD
         $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus', 'id20205717_najd', '%zlI/so)7zem5BKX');
-
-        $base->exec("SET CHARACTER SET utf8");
 
         //2° - Prépareation de requette et execution
         $sql = "SELECT Continent, SUM(TotalCases) as total_cas_par_continent
