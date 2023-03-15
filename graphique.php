@@ -221,7 +221,7 @@ function fct3(){
 
     var data = <?php echo $json_data; ?>;
 
-    // Parcourir les tuples et afficher les données dans la console
+    // Parcourirr les tuples et afficher les données dans la console
     for (var i = 0; i < data.length; i++) {
         var tuple = data[i];
         var continent = tuple[0];
