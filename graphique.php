@@ -212,7 +212,7 @@ function fct3(){
 
         $json_data = json_encode($data);
 
-    ?>
+    ?>;
 
     var data = <?php echo $json_data; ?>;
 
