@@ -237,9 +237,6 @@ function fct3(){
 
 </body>
 
-</html>
-
-
 
 
 
