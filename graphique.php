@@ -189,44 +189,6 @@ function fct2(){
         resize: true
     });
 	}
-
-function fct3(){
-		
-    <?php
-        //Lister le contenu de la table movies
-
-        //1° - Connexion à la BDD
-        $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus2', 'id20205717_najd', '1uy&B(t{m7_#|>*H');
-
-        //2° - Prépareation de requette et execution
-        $sql = "SELECT nom, total_cas FROM pays";
-
-        $result = $base->query($sql);
-
-        $data = array();
-        while($row = $result->fetch_assoc()) {
-            $nom_pays = $row['nom'];
-            $total_cas = $row['total_cas'];
-            $data[] = array($nom_pays, $total_cas);
-        }
-
-        $json_data = json_encode($data);
-
-    ?>;
-
-    var data = <?php echo $json_data; ?>;
-
-    // Parcourir les tuples et afficher les données dans la console
-    for (var i = 0; i < data.length; i++) {
-        var tuple = data[i];
-        var nom_pays = tuple[0];
-        var total_cas = tuple[1];
-        console.log("Pays: " + nom_pays + " - Nombre de cas: " + total_cas);
-    }
-
-}  
-
-
 	
 	</script>
 	
