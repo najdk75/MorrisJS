@@ -189,6 +189,46 @@ function fct2(){
         resize: true
     });
 	}
+
+function fct3(){
+	
+    $("#morris-area-chart").empty();
+
+    <?php
+        //Lister le contenu de la table movies
+
+        //1° - Connexion à la BDD
+        $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus2', 'id20205717_najd', '1uy&B(t{m7_#|>*H');
+
+        //2° - Prépareation de requette et execution
+        $sql = "SELECT nom, total_cas FROM pays";
+        $result = $base->query($sql);
+
+        $data = array();
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $data[] = array('nom' => $row['nom'], 'total_cas' => $row['total_cas']);
+        }
+        $json_data = json_encode($data);
+
+    ?>
+    var data = <?php echo $json_data; ?>;
+
+    $("#morris-area-chart").empty();
+    Morris.Area({
+            element: 'morris-area-chart',
+            data: data,
+            xkey: 'nom',
+            ykeys: ['total_cas'],
+            labels: ['Total cas'],
+            pointSize: 2,
+            hideHover: 'auto',
+            resize: true
+        });
+
+}  
+
+
+
 	
 	</script>
 	
