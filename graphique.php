@@ -197,7 +197,7 @@ function fct3(){
     <?php
         //Listerrr le contenu de la table movies
 
-        //1° - Connexion à la BDD
+        //1° - Connexions à la BDD
         $base = new PDO('mysql:host=localhost; dbname=id20205717_coronavirus2', 'id20205717_najd', '1uy&B(t{m7_#|>*H');
 
         //2° - Prépareation de requette et execution
